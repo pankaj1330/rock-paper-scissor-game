@@ -18,11 +18,9 @@ function randomNo() {
 }
 
 function WinOrLoss() {
-    if ((yourChoice.src == './images/paper.png' && compChoice.src == './images/scissor.png') ||
-        (yourChoice.src == './images/scissor.png' &&
-            compChoice.src == './images/rock.png') ||
-        (yourChoice.src == './images/rock.png' &&
-            compChoice.src == './images/paper.png'))
+    if ((yourChoice.src.substr(yourChoice.src.lastIndexOf('/')+1) == 'paper.png' && compChoice.src.substr(compChoice.src.lastIndexOf('/')+1) == 'scissor.png') ||
+        (yourChoice.src.substr(yourChoice.src.lastIndexOf('/')+1) == 'scissor.png' && compChoice.src.substr(compChoice.src.lastIndexOf('/')+1) == 'rock.png') ||
+        (yourChoice.src.substr(yourChoice.src.lastIndexOf('/')+1) == 'rock.png' && compChoice.src.substr(compChoice.src.lastIndexOf('/')+1) == 'paper.png'))
     {
         result.innerHTML = `You <br> <span>Loose</span>`;
         resultContainer.style.background = 'rgb(255, 186, 186)';
