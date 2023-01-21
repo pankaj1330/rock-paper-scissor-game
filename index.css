@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    font-family: sans-serif;
+}
+body{
+    background-color: beige;
+}
+
+.game{
+    height: 100vh;
+    max-height: 1000px;
+}
+.game .game-container{
+    max-width: 1400px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    padding: 1rem;
+}
+.game-container img{
+    width: 200px;
+    height: 150px;
+}
+.game-container .choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+.game-container .choices div{
+    text-align: center;
+}
+.game-container .choices div img:hover{
+    cursor: pointer;
+    transform: translateY(-12px) scale(.8);
+    transition: all 1s;
+}
+.game-container .result{
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 5rem;
+    padding: 3rem;
+    border: 2px solid black;
+    background-color: rgb(190, 255, 155);
+}
+.game-container .result h2{
+    text-align: center;
+}
+
+@media only screen and (max-width:1000px){
+    .game-container .choices{
+        gap: 4rem;
+    }
+    .game-container img{
+        width: 100px;
+        height: 80px;
+    }
+    .game-container .result{
+        width: auto;
+        gap: 2.2rem;
+        padding: 1.3rem;
+    }
+}
+@media only screen and (max-width:500px){
+    html{
+        font-size: 12px;
+    }
+    .game-container .choices{
+        gap: 4rem;
+    }
+    .game-container img{
+        width: 60px;
+        height: 50px;
+    }
+    .game-container .result{
+        padding: 1rem;
+    }
+}
+
